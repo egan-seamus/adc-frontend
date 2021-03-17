@@ -50,7 +50,7 @@ class App extends React.Component {
   async componentDidMount() {
     try {
       setInterval(async () => {
-        const res = await fetch('adc-backend.herokuapp.com/getData');
+        const res = await fetch('http://adc-backend.herokuapp.com/');
         const data = await res.json();
         console.log(data)
         var currentVal = data.voltage.toFixed(2);
